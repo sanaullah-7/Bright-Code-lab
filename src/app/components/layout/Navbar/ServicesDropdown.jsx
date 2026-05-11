@@ -4,7 +4,7 @@ import { servicesdata } from '@/data/Data'
 export default function ServicesDropdown() {
   return (
     <>
-    <main className='grid grid-cols-2 px-52 p-5  w-[80vw]  '>
+    <main className='grid grid-cols-2 px-40 p-5   '>
     <div className='flex flex-col  gap-4 text-sm mt-5 '>
         <h1 className='text-md font-semibold tracking-widest '>DEVELOPMENT</h1>
       {servicesdata.map((service)=>(

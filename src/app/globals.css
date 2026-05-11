@@ -8,6 +8,8 @@ body {
 @theme {
   --color-darkblue:#0031A0;
   --color-gray: #4b5563;
+    --breakpoint-md:970px;
+
 }
 /* :root {
   --background: #ffffff;

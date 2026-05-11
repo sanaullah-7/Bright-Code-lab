@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
 import Image from "next/image";
+import { Menu } from "lucide-react";
 
 import { navLinks } from "@/data/Data";
 
@@ -16,51 +17,51 @@ export default function Navbar() {
 
  
   // Navbar Reference
-  const navbarRef = useRef(null);
-  // Toggle Dropdown
+  // const navbarRef = useRef(null);
+  // // Toggle Dropdown
   const toggleMenu = (menuName) => {
     setActiveMenu((prev) => (prev === menuName ? null : menuName));
   };
   // Close Dropdown Outside Click
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setActiveMenu(null);
-      }
-    };
+  // useEffect(() => {
+  //   const handleClickOutside = (event) => {
+  //     if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+  //       setActiveMenu(null);
+  //     }
+  //   };
 
-    document.addEventListener("mousedown", handleClickOutside);
+    // document.addEventListener("mousedown", handleClickOutside);
 
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+    // return () => {
+    //   document.removeEventListener("mousedown", handleClickOutside);
+    // };
+  // }, []);
 
   return (
     <header>
       <div
-        ref={navbarRef}
-        className="mx-auto mt-6 w-[75vw] rounded-4xl border-1 border-gray-300 bg-white"
+        // ref={navbarRef}
+        className="mx-auto md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border-1 border-gray-300 bg-white"
       >
         
         {/* Navbar Top */}
        
 
-        <div className="flex h-16 items-center justify-between px-5">
+        <div className="flex h-16 items-center justify-between px-5 text-lg">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
             <Image
               src="/ourlogo.png"
               priority
               alt="Logo"
-              width={120}
-              height={120}
+              width={140}
+              height={140}
             />
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden items-center gap-8 md:flex">
+          <nav className="hidden items-center w-[45%] gap-6 justify-between  md:flex">
             {navLinks.map((link) => {
               // Check dropdown items
               const hasDropdown =
@@ -115,10 +116,11 @@ export default function Navbar() {
           {/* Contact Button */}
           <Link
             href="/contact"
-            className="rounded-full border border-black bg-darkblue px-7 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1042b7]"
+            className="rounded-full hidden md:flex border border-black bg-darkblue px-7 py-2.5 text-sm font-semibold text-white transition hover:bg-[#1042b7]"
           >
             Contact Us
           </Link>
+          <button className="md:hidden"><Menu/></button>
         </div>
 
        
@@ -126,7 +128,7 @@ export default function Navbar() {
         
 
         <div
-          className={`grid transition-all duration-300 ease-in-out ${
+          className={`grid  transition-all duration-300 ease-in-out ${
             activeMenu ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
           }`}
         >

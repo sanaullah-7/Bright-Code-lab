@@ -1,4 +1,5 @@
 "use client";
+import React from 'react'
 
 import { useEffect, useRef, useState } from "react";
 
@@ -9,68 +10,59 @@ import { navLinks } from "@/data/Data";
 
 import ServicesDropdown from "./ServicesDropdown";
 import PortfolioDropdown from "./PortfolioDropdown";
-import MobileMenu from "./MobileMenu";
 
-export default function Navbar() {
-  const [activeMenu, setActiveMenu] = useState(null);
-  const [visibleMenu, setVisibleMenu] = useState(null); 
-  const [open , setOpen] = useState(null)
 
-  function Handletoogle(){
-    setOpen(!open)
-  }
-
-  // Navbar Reference
-  const navbarRef = useRef(null);
-  // // Toggle Dropdown
-  // toggleMenu function update karo
-  const toggleMenu = (menuName) => {
-    if (activeMenu === menuName) {
-      setActiveMenu(null); // animation shuru
-      setTimeout(() => setVisibleMenu(null), 500); // animation khatam hone ke baad unmount
-    } else {
-      setVisibleMenu(menuName); 
-      setActiveMenu(menuName); 
-    }
-  };
-  // Close Dropdown Outside Click
-
-  useEffect(() => {
-    function handleClickOutside (event)  {
-      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
-        setActiveMenu(null);
+export default function MobileMenu() {
+      const [activeMenu, setActiveMenu] = useState(null);
+      const [visibleMenu, setVisibleMenu] = useState(null); 
+      const [open , setOpen] = useState(null)
+    
+      function Handletoogle(){
+        setOpen(!open)
       }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
-
+    
+      // Navbar Reference
+      const navbarRef = useRef(null);
+      // // Toggle Dropdown
+      // toggleMenu function update karo
+      const toggleMenu = (menuName) => {
+        if (activeMenu === menuName) {
+          setActiveMenu(null); // animation shuru
+          setTimeout(() => setVisibleMenu(null), 500); // animation khatam hone ke baad unmount
+        } else {
+          setVisibleMenu(menuName); 
+          setActiveMenu(menuName); 
+        }
+      };
+      // Close Dropdown Outside Click
+    
+      useEffect(() => {
+        function handleClickOutside (event)  {
+          if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+            setActiveMenu(null);
+          }
+        };
+    
+        document.addEventListener("mousedown", handleClickOutside);
+    
+        return () => {
+          document.removeEventListener("mousedown", handleClickOutside);
+        };
+      }, []);
+    
   return (
-    <header>
-      <div
+ <div
         ref={navbarRef}
-        className="mx-auto  md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border-1 border-gray-300 bg-white"
+        className=" md:hidden   border-1 border-gray-300 bg-white"
       >
         {/* Navbar Top */}
 
-        <div className="flex h-16 items-center justify-between px-9 md:px-5 text-lg">
+        <div className=" h-full grid grid-cols-1 gap-y-44 pb-10 text-lg">
           {/* Logo */}
-          <Link href="/" className="flex  items-center gap-2">
-            <Image
-              src="/ourlogo.png"
-              priority
-              alt="Logo"
-              width={110}
-              height={110}
-            />
-          </Link>
+          
 
           {/* Navigation */}
-          <nav className="hidden items-center w-[45%] gap-7 justify-between text-base  md:flex">
+          <nav className="  text-base  ">
             {navLinks.map((link) => {
               // Check dropdown items
               const hasDropdown =
@@ -114,7 +106,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-base text-gray-700 transition hover:text-darkblue"
+                  className="text-base flex  text-gray-700 transition hover:text-darkblue"
                 >
                   {link.label}
                 </Link>
@@ -125,13 +117,11 @@ export default function Navbar() {
           {/* Contact Button */}
           <Link
             href="/contact"
-            className="rounded-full hidden md:flex border font-serif border-black bg-darkblue px-7 py-2.5 text-base  text-white transition hover:bg-[#1042b7]"
+            className="rounded-full  border font-serif border-black bg-darkblue px-7 py-2.5 text-base  text-white transition hover:bg-[#1042b7]"
           >
             Contact us
           </Link>
-          <button onClick={Handletoogle} className="md:hidden">
-            <Menu className="h-6 w-6 text-black" />
-          </button>
+          
         </div>
 
         {/* Dropdown Container */}
@@ -159,8 +149,5 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Size */}
-      {open && ( <MobileMenu/> )}
-    </header>
-  );
+  )
 }

@@ -53,19 +53,20 @@ export default function Navbar() {
     <header>
       <div
         ref={navbarRef}
-        className="mx-auto  md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border-1 border-gray-300 bg-white"
+        className="mx-auto  md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border border-gray-300 bg-white"
       >
         {/* Navbar Top */}
 
-        <div className="flex h-16 items-center justify-between px-7 md:px-5 text-lg">
+        <div className="flex h-15 items-center justify-between px-6 md:px-2 text-lg">
           {/* Logo */}
-          <Link href="/" className="flex  items-center gap-2">
+          <Link href="/" className="flex h-auto w-auto md:ml-3 items-center gap-2">
             <Image
               src="/ourlogo.png"
-              priority
               alt="Logo"
               width={110}
               height={110}
+              priority
+               className=" h-11 w-auto"
             />
           </Link>
 
@@ -86,7 +87,7 @@ export default function Navbar() {
                     onClick={() => toggleMenu(menuName)}
                     className="flex items-center gap-1 text-md text-gray-700 transition cursor-pointer hover:text-darkblue"
                   >
-                    {link.label}
+                    {link.label }
 
                     {/* Arrow */}
                     <svg
@@ -99,7 +100,7 @@ export default function Navbar() {
                       strokeWidth="`"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className={`transition-transform duration-300 ${
+                      className={`transition-transform duration-300 hover:text-black ${
                         activeMenu === menuName ? "rotate-180" : "rotate-0"
                       }`}
                     >
@@ -125,7 +126,7 @@ export default function Navbar() {
           {/* Contact Button */}
           <Link
             href="/contact"
-            className="rounded-full hidden md:flex border font-serif border-black bg-darkblue px-7 py-2.5 text-base  text-white transition hover:bg-[#1042b7]"
+            className="rounded-full hidden md:flex border font-serif border-black bg-darkblue px-8 py-2.5 text-base  text-white transition hover:bg-[#1042b7]"
           >
             Contact us
           </Link>

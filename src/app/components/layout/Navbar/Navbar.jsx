@@ -57,7 +57,7 @@ export default function Navbar() {
       >
         {/* Navbar Top */}
 
-        <div className="flex h-16 items-center justify-between px-9 md:px-5 text-lg">
+        <div className="flex h-16 items-center justify-between px-7 md:px-5 text-lg">
           {/* Logo */}
           <Link href="/" className="flex  items-center gap-2">
             <Image

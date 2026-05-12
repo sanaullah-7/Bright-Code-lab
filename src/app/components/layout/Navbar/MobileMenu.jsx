@@ -15,11 +15,7 @@ import PortfolioDropdown from "./PortfolioDropdown";
 export default function MobileMenu() {
       const [activeMenu, setActiveMenu] = useState(null);
       const [visibleMenu, setVisibleMenu] = useState(null); 
-      const [open , setOpen] = useState(null)
-    
-      function Handletoogle(){
-        setOpen(!open)
-      }
+   
     
       // Navbar Reference
       const navbarRef = useRef(null);

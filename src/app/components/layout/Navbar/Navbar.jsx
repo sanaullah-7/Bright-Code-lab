@@ -13,34 +13,34 @@ import MobileMenu from "./MobileMenu";
 
 export default function Navbar() {
   const [activeMenu, setActiveMenu] = useState(null);
-  const [visibleMenu, setVisibleMenu] = useState(null); 
-  const [open , setOpen] = useState(null)
+  const [visibleMenu, setVisibleMenu] = useState(null);
+  const [open, setOpen] = useState(null);
 
-  function Handletoogle(){
-    setOpen(!open)
+  function Handletoogle() {
+    setOpen(!open);
   }
 
   // Navbar Reference
   const navbarRef = useRef(null);
-  // // Toggle Dropdown
-  // toggleMenu function update karo
+  // Toggle Dropdown
   const toggleMenu = (menuName) => {
     if (activeMenu === menuName) {
-      setActiveMenu(null); // animation shuru
-      setTimeout(() => setVisibleMenu(null), 500); // animation khatam hone ke baad unmount
+      setActiveMenu(null);
+      setTimeout(() => setVisibleMenu(null), 500);
     } else {
-      setVisibleMenu(menuName); 
-      setActiveMenu(menuName); 
+      setVisibleMenu(menuName);
+      setActiveMenu(menuName);
     }
   };
   // Close Dropdown Outside Click
 
   useEffect(() => {
-    function handleClickOutside (event)  {
+    function handleClickOutside(event) {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setActiveMenu(null);
+        setOpen(null);
       }
-    };
+    }
 
     document.addEventListener("mousedown", handleClickOutside);
 
@@ -57,16 +57,19 @@ export default function Navbar() {
       >
         {/* Navbar Top */}
 
-        <div className="flex h-15 items-center justify-between px-6 md:px-2 text-lg">
+        <div className="flex h-14 md:py-8 items-center justify-between  max-sm:px-6 px-9 md:px-2 text-lg">
           {/* Logo */}
-          <Link href="/" className="flex h-auto w-auto md:ml-3 items-center gap-2">
+          <Link
+            href="/"
+            className="flex h-auto w-auto -ml-2.5 md:ml-3 items-center gap-2"
+          >
             <Image
               src="/ourlogo.png"
               alt="Logo"
               width={110}
               height={110}
               priority
-               className=" h-11 w-auto"
+              className=" h-11 w-auto"
             />
           </Link>
 
@@ -85,9 +88,9 @@ export default function Navbar() {
                   <button
                     key={link.href}
                     onClick={() => toggleMenu(menuName)}
-                    className="flex items-center gap-1 text-md text-gray-700 transition cursor-pointer hover:text-darkblue"
+                    className=" flex items-center gap-1 text-md text-gray-700 transition cursor-pointer hover:text-darkblue"
                   >
-                    {link.label }
+                    {link.label}
 
                     {/* Arrow */}
                     <svg
@@ -96,11 +99,11 @@ export default function Navbar() {
                       height="20"
                       viewBox="0 0 24 24"
                       fill="none"
-                      stroke="currentColor"
-                      strokeWidth="`"
+                      stroke="#000"
+                      strokeWidth="0.9"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className={`transition-transform duration-300 hover:text-black ${
+                      className={`transition-transform duration-300 ${
                         activeMenu === menuName ? "rotate-180" : "rotate-0"
                       }`}
                     >
@@ -131,7 +134,7 @@ export default function Navbar() {
             Contact us
           </Link>
           <button onClick={Handletoogle} className="md:hidden">
-            <Menu className="h-6 w-6 text-black" />
+            <Menu className="h-5 w-5 " />
           </button>
         </div>
 
@@ -144,24 +147,28 @@ export default function Navbar() {
         >
           <div className="overflow-hidden">
             <div
-              className={`border-t border-gray-200 transition-all ease-in-out ${
-                activeMenu
-                  ? " opacity-100"
-                  : " opacity-0"
+              className={`border-t border-gray-300 transition-all ease-in-out ${
+                activeMenu ? " opacity-100" : " opacity-0"
               }`}
             >
               {/* Services Dropdown */}
               {visibleMenu === "services" && <ServicesDropdown />}
               {/* activeMenu → visibleMenu */}
               {visibleMenu === "portfolio" && <PortfolioDropdown />}
-              
             </div>
           </div>
         </div>
+        {/* Mobile Size */}
+        <div
+          className={`grid md:hidden overflow-hidden  transition-all ease-in-out duration-300  ${
+            open ? "grid-rows-[1fr]" : "grid-rows-[0fr] "
+          }`}
+        >
+          <div className="overflow-hidden">
+            <MobileMenu />
+          </div>
+        </div>
       </div>
-
-      {/* Mobile Size */}
-      {open && ( <MobileMenu/> )}
     </header>
   );
 }

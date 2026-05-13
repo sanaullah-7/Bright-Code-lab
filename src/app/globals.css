@@ -1,14 +1,15 @@
 @import "tailwindcss";
 
+@theme  {
+  --color-darkblue: #0031a0;
+  --color-gray: #4b5563;
+  --breakpoint-md: 970px;
+  --breakpoint-serviceDd: 765px;
+}
+
 body {
   background: rgb(243, 239, 239);
-  font-family:  sans-serif;
-}
-@theme {
-  --color-darkblue:#0031A0;
-  --color-gray: #4b5563;
-    --breakpoint-md:970px;
-
+  font-family: sans-serif;
 }
 /* :root {
   --background: #ffffff;

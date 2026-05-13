@@ -19,12 +19,11 @@ export default function MobileMenu() {
     
       // Navbar Reference
       const navbarRef = useRef(null);
-      // // Toggle Dropdown
-      // toggleMenu function update karo
+      
       const toggleMenu = (menuName) => {
         if (activeMenu === menuName) {
-          setActiveMenu(null); // animation shuru
-          setTimeout(() => setVisibleMenu(null), 500); // animation khatam hone ke baad unmount
+          setActiveMenu(null); 
+          setTimeout(() => setVisibleMenu(null), 500); 
         } else {
           setVisibleMenu(menuName); 
           setActiveMenu(menuName); 
@@ -49,16 +48,16 @@ export default function MobileMenu() {
   return (
  <div
         ref={navbarRef}
-        className=" md:hidden   border-1 border-gray-300 bg-white"
+        className=" md:hidden   border border-gray-300 bg-white"
       >
         {/* Navbar Top */}
 
-        <div className=" h-full grid grid-cols-1 gap-y-44 pb-10 text-lg">
-          {/* Logo */}
+        <div className="  space-y-10 ml-5 sm:ml-8  gap-y-44 pb-10 text-lg">
+        
           
 
           {/* Navigation */}
-          <nav className="  text-base  ">
+          <nav className="  text-base space-y-5 mt-5 ">
             {navLinks.map((link) => {
               // Check dropdown items
               const hasDropdown =
@@ -69,8 +68,9 @@ export default function MobileMenu() {
                 const menuName = link.label.toLowerCase();
 
                 return (
+                  <div key={link.href}>
                   <button
-                    key={link.href}
+                    
                     onClick={() => toggleMenu(menuName)}
                     className="flex items-center gap-1 text-md text-gray-700 transition cursor-pointer hover:text-darkblue"
                   >
@@ -94,6 +94,28 @@ export default function MobileMenu() {
                       <polyline points="6 9 12 15 18 9" />
                     </svg>
                   </button>
+                  <div
+                    className={` grid  transition-all ease-in-out duration-300  ${
+                      activeMenu === menuName ? "grid-rows-[1fr]" : "grid-rows-[0fr] "
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <div
+                        className={` transition-all ease-in-out ${
+                          activeMenu === menuName
+                            ? " opacity-100"
+                            : " opacity-0"
+                        }`}
+                      >
+             
+              {menuName === "services" && <ServicesDropdown />}
+              
+              {visibleMenu === "portfolio" && <PortfolioDropdown />}
+              
+            </div>
+          </div>
+        </div>
+        </div>
                 );
               }
 
@@ -121,28 +143,7 @@ export default function MobileMenu() {
         </div>
 
         {/* Dropdown Container */}
-
-        <div
-          className={`hidden md:grid  transition-all ease-in-out duration-300  ${
-            activeMenu ? "grid-rows-[1fr]" : "grid-rows-[0fr] "
-          }`}
-        >
-          <div className="overflow-hidden">
-            <div
-              className={`border-t border-gray-200 transition-all ease-in-out ${
-                activeMenu
-                  ? " opacity-100"
-                  : " opacity-0"
-              }`}
-            >
-              {/* Services Dropdown */}
-              {visibleMenu === "services" && <ServicesDropdown />}
-              {/* activeMenu → visibleMenu */}
-              {visibleMenu === "portfolio" && <PortfolioDropdown />}
-              
-            </div>
-          </div>
-        </div>
+          
       </div>
 
   )

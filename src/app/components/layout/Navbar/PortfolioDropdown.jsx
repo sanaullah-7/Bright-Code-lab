@@ -31,7 +31,7 @@ export default function PortfolioDropdown() {
                 className="rounded-2xl h-[30vh] w-[60vw] object-cover"
                 src={project.src}
                 alt={project.title}
-                width={400} 
+                width={400}
                 height={300}
               />
               <h1 className="font-semibold tracking-widest mt-6">

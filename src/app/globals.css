@@ -3,12 +3,13 @@
 @theme  {
   --color-darkblue: #0031a0;
   --color-gray: #4b5563;
+  --color-darklab :#333333;
   --breakpoint-md: 970px;
   --breakpoint-serviceDd: 765px;
 }
 
 body {
-  background: rgb(243, 239, 239);
+  background: rgb(243, 242, 242);
   font-family: sans-serif;
 }
 /* :root {

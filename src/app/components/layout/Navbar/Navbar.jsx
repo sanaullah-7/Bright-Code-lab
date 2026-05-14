@@ -53,7 +53,7 @@ export default function Navbar() {
     <header>
       <div
         ref={navbarRef}
-        className="mx-auto  md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border border-gray-300 bg-white"
+        className="mx-auto h-full text-darklab   md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border border-gray-300 bg-white"
       >
         {/* Navbar Top */}
 
@@ -88,7 +88,7 @@ export default function Navbar() {
                   <button
                     key={link.href}
                     onClick={() => toggleMenu(menuName)}
-                    className=" flex items-center gap-1 text-md text-gray-700 transition cursor-pointer hover:text-darkblue"
+                    className=" flex items-center gap-1 text-md  transition cursor-pointer hover:text-darkblue"
                   >
                     {link.label}
 
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-base text-gray-700 transition hover:text-darkblue"
+                  className="text-base  transition hover:text-darkblue"
                 >
                   {link.label}
                 </Link>

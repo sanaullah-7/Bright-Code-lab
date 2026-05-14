@@ -6,7 +6,7 @@ import { portfolioData, portfolioImages } from "@/data/Data";
 export default function PortfolioDropdown() {
   return (
     <main className="md:flex  mb-5">
-      <div className="flex md:w-[35vw] flex-col md:px-6 gap-4 text-sm mt-5">
+      <div className="flex md:w-[35vw] text-darklab flex-col md:px-6 gap-4 text-sm mt-5">
         {portfolioData.map((project) => (
           <Link
             key={project.href}
@@ -18,7 +18,7 @@ export default function PortfolioDropdown() {
         ))}
       </div>
 
-      <div className="flex  text-sm px-5  mt-6 gap-8">
+      <div className="flex  text-sm px-5 text-darklab  mt-6 gap-8">
         {portfolioImages.map((project) => {
           // ── YAHAN RETURN ADD KIYA HAI ──
           return (
@@ -37,7 +37,7 @@ export default function PortfolioDropdown() {
               <h1 className="font-semibold tracking-widest mt-6">
                 {project.title}
               </h1>
-              <p className="text-gray group-hover:text-darkblue transition-colors">
+              <p className=" group-hover:text-darkblue transition-colors">
                 {project.description}
               </p>
             </Link>

@@ -69,7 +69,7 @@ export default function Navbar() {
               width={110}
               height={110}
               priority
-              className=" h-11 w-auto"
+              
             />
           </Link>
 
@@ -118,7 +118,7 @@ export default function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-base  transition hover:text-darkblue"
+                  className="text-base text-darklab transition hover:text-darkblue"
                 >
                   {link.label}
                 </Link>

@@ -13,7 +13,7 @@ export default function ServicesDropdown() {
           <div className="flex gap-5 ">
             {/* <TbBracketsAngleOff className='h-4.5 w-4.5 text-gray-600'  /> */}
             <Image
-              className=" "
+              
               src="/angleicon.png"
               alt="logo"
               height={20}

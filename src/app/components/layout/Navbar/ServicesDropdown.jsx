@@ -1,8 +1,8 @@
 import React from "react";
 import Link from "next/link";
 import { servicesdata } from "@/data/Data";
-import { PencilRuler, Settings, ChevronDown } from "lucide-react";
-import { TbBracketsAngleOff } from "react-icons/tb";
+import { PencilRuler, Settings } from "lucide-react";
+// import { TbBracketsAngleOff } from "react-icons/tb";
 import Image from "next/image";
 
 export default function ServicesDropdown() {
@@ -13,8 +13,8 @@ export default function ServicesDropdown() {
           <div className="flex gap-5 ">
             {/* <TbBracketsAngleOff className='h-4.5 w-4.5 text-gray-600'  /> */}
             <Image
-              className="h-5 w-5 "
-              src="/Angleicon.png"
+              className=" "
+              src="/angleicon.png"
               alt="logo"
               height={20}
               width={20}

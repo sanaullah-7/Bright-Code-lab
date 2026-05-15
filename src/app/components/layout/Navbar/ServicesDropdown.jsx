@@ -14,7 +14,7 @@ export default function ServicesDropdown() {
             {/* <TbBracketsAngleOff className='h-4.5 w-4.5 text-gray-600'  /> */}
             <Image
               
-              src="/angleicon.png"
+              src="/Home/angleicon.png"
               alt="logo"
               height={20}
               width={20}

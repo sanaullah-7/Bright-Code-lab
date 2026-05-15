@@ -50,26 +50,27 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header>
+    <header className="fixed top-0 left-0 right-0 z-50  flex justify-center items-center ">
       <div
         ref={navbarRef}
-        className="mx-auto h-full text-darklab   md:mt-6 max-w-full md:w-[60em]  md:rounded-4xl border border-gray-300 bg-white"
+        className=" h-full text-darklab   md:mt-6 max-w-full md:w-[60em]   md:rounded-4xl border border-gray-300 bg-white/95"
       >
         {/* Navbar Top */}
 
-        <div className="flex h-14 md:py-8 items-center justify-between  max-sm:px-6 px-9 md:px-2 text-lg">
+        <div className="flex h-14  md:py-8 items-center justify-between  max-sm:px-6 px-9 md:px-2 text-lg">
           {/* Logo */}
           <Link
             href="/"
             className="flex h-auto w-auto -ml-2.5 md:ml-3 items-center gap-2"
           >
             <Image
-              src="/ourlogo.png"
+            className="h-12 w-28"
+              src="/Home/ourlogo.png"
               alt="Logo"
-              width={110}
-              height={110}
+              width={200}
+              height={200}
               priority
-              
+              // unoptimized
             />
           </Link>
 

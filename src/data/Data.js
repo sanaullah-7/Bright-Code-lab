@@ -30,21 +30,23 @@ export const portfolioData = [
     title: "Artificial Intelligence",
     href: "/portfolio/artificial-intelligence",
   },
-  { title: "Startups", href: "/portfolio/edtech" },
+  { title: "EdTech", href: "/portfolio/edtech" },
+  { title: "Startups", href: "/portfolio/startups" },
   { title: "See All", href: "/portfolio", className: "font-semibold" },
 ];
+
 
 export const portfolioImages = [
   {
     href: "/services/ux-ui-product-design",
-    src: "/portfolionav1.png",
+    src: "/Home/portfolionav1.png",
     title: "Planing",
     description:
       "See How we used AI to engance User Generated Content creation on planning →",
   },
   {
     href: "/services/travel-and-hospitality",
-    src: "/portfolionav2.png",
+    src: "/Home/portfolionav2.png",
     title: "Trava",
     description:
       "Discover how we transformed the travel experience with our innovative booking platform →",

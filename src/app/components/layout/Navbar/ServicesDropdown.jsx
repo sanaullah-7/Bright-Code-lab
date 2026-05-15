@@ -16,8 +16,9 @@ export default function ServicesDropdown() {
               className="h-5 w-5 "
               src="/Angleicon.png"
               alt="logo"
-              height={1}
-              width={1}
+              height={20}
+              width={20}
+              unoptimized
             />
             <h1 className="text-md font-semibold tracking-widest ">
               DEVELOPMENT

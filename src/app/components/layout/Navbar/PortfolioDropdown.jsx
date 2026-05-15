@@ -33,6 +33,7 @@ export default function PortfolioDropdown() {
                 alt={project.title}
                 width={400}
                 height={300}
+                unoptimized
               />
               <h1 className="font-semibold tracking-widest mt-6">
                 {project.title}

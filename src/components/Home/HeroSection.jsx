@@ -73,7 +73,7 @@ export default function HeroSection() {
         </div>
 
         {/* Right Side */}
-        <div className="h-160 sm:h-auto xl:h-200 ">
+        <div className=" h-auto  ">
           <div className="relative w-md sm:w-xl h-100 sm:h-145 rounded-[120px] bg-darkblue  max-lg:scale-75  origin-center">
             <Image  
               className="absolute left-10 bottom-16 h-100 sm:h-140 w-50 sm:w-64"
@@ -125,6 +125,7 @@ export default function HeroSection() {
           
         </div>
       </div>
+          <h1 className='text-gray text-center mt-20 sm:mt-10'>What we can do for you?</h1>
 
     </main>
 )

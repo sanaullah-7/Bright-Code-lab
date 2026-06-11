@@ -4,7 +4,6 @@ import React from "react";
 import { useEffect, useRef, useState } from "react";
 
 import Link from "next/link";
-import Image from "next/image";
 import { Menu } from "lucide-react";
 import { navLinks } from "@/data/Data";
 

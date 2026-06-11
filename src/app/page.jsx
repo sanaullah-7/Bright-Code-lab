@@ -1,15 +1,15 @@
-import Image from "next/image";
 
-import Home from "@/app/(page)/home/page";
-import Link from "next/link";
-export default function HomePage() {
+import HeroSection from "@/components/Home/HeroSection";
+import ServicesSection from "@/components/Home/ServicesSection";
+
+
+export default function page() {
   return (
     <>
       
       <main>
-       
-        <Home/>
-     
+     <HeroSection/>
+     <ServicesSection/>
       </main>
     </>
   );

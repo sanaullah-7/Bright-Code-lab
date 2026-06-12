@@ -11,15 +11,15 @@ const logos = [
 
 export default function TrustedSection() {
   return (
-    <section className="py-16">
-      <div className="py-16 sm:px-40">
+    <section className="py-12">
         <h1 className="text-center text-gray">Since 2017, Trusted by:</h1>
+      <div className="pb-10 sm:px-40">
 
         <div className=" mx-auto grid sm:grid-cols-2 md2:grid-cols-3 lg:grid-cols-5 mt-8 gap-y-10  ">
           {logos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
               <Image
-                key={logo.logo}
+               
                 src={logo}
                 alt="logo"
                 width={110}

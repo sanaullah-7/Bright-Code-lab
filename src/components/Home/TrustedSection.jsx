@@ -11,7 +11,7 @@ const logos = [
 
 export default function TrustedSection() {
   return (
-    <section className="py-12">
+    <section className="py-5 sm::py-12 mb-20">
         <h1 className="text-center text-gray">Since 2017, Trusted by:</h1>
       <div className="pb-10 sm:px-40">
 
@@ -30,7 +30,7 @@ export default function TrustedSection() {
           ))}
         </div>
       </div>
-      <div className="bg-darkblue px-1 pt-5   text-white flex flex-wrap  justify-center items-center sm:gap-10  md:gap-44 lg:gap-64 max-w-screen mx-auto   ">
+      <div className="bg-darkblue px-1 pt-5 mt-10 sm:mt-0  text-white flex flex-wrap  justify-center items-center sm:gap-10  md:gap-44 lg:gap-64 max-w-screen mx-auto   ">
         <div className="space-y-2">
         <p className="w-70">
           (...) Working with them has been a pleasure. The working relationship

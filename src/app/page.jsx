@@ -1,6 +1,7 @@
 
 import HeroSection from "@/components/Home/HeroSection";
 import ProjectSection from "@/components/Home/ProjectSection";
+import ResultsSection from "@/components/Home/ResultSection";
 import ServicesSection from "@/components/Home/ServicesSection";
 import TrustedSection from "@/components/Home/TrustedSection";
 
@@ -14,6 +15,7 @@ export default function page() {
      <ServicesSection/>
      <TrustedSection/>
      <ProjectSection/>
+     <ResultsSection/>
       </main>
     </>
   );

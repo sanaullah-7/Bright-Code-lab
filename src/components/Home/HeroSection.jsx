@@ -5,7 +5,7 @@ export default function HeroSection() {
   return (
     <main className="pt-28 overflow-x-hidden">
       <div className="md:mt-16 w-full">
-        <h1 className="flex flex-col max-sm:mx-5 mx-10 serviceDd:mx-14 md:items-center  text-darklab tracking-wide max-sm:text-3xl text-4xl serviceDd:text-5xl gap-5 md:text-[75px]">
+        <h1 className="flex flex-col max-sm:mx-5 mx-10 serviceDd:mx-14 md:items-center  text-darklab tracking-wide text- max-sm:text-2xl text-4xl serviceDd:text-5xl gap-5 md:text-[75px]">
           <span className="md:-ml-72 lg:-ml-96">Custom Software</span>
 
           <span className="md:-ml-16 flex justify-center">
@@ -125,7 +125,7 @@ export default function HeroSection() {
           
         </div>
       </div>
-          <h1 className='text-gray text-center mt-20 sm:mt-10'>What we can do for you?</h1>
+          <h1 className='text-gray text-center mt-28 sm:mt-10'>What we can do for you?</h1>
 
     </main>
 )

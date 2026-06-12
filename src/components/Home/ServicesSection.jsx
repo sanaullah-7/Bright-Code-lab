@@ -37,9 +37,9 @@ const data = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-16 px-4 md:px-8 lg:px-16">
+    <section className="py-8 px-4 md:px-8 lg:px-16">
       {/* Heading */}
-      <div className="text-center mb-14">
+      <div className="text-center mb-6 md:mb-14">
         <h1 className="text-2xl md:text-3xl lg:text-4xl  tracking-widest leading-tight">
           <span className="text-darkblue">Custom</span> Software
           <br />

@@ -21,7 +21,7 @@ export default function ResultsSection() {
   ];
 
   return (
-    <section className=" px-5 sm:px-10 md:px-16 lg:px-24 pb-20">
+    <section className="max-w-7xl px-5 sm:px-10 md:px-16 lg:px-24 pb-20 ">
 
       {/* Top green line */}
       <div className="w-26 sm:w-32 h-2 rounded-2xl bg-darkblue mb-6" />
@@ -38,14 +38,14 @@ export default function ResultsSection() {
       </p>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 max-md:grid-cols-2 md:grid-cols-3  gap-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
         {stats.map((stat, i) => (
           <div
             key={i}
-            className={`rounded-3xl p-8 flex flex-col justify-between  ${
+            className={`rounded-3xl p-8 flex flex-col justify-between min-h-[180px] ${
               i === 2
-                ? "col-span-1 bg-darkblue text-white"
-                : "bg-white "
+                ? "bg-darkblue text-white"
+                : "bg-white  "
             }`}
           >
             {/* Big number */}
@@ -66,8 +66,8 @@ export default function ResultsSection() {
             <div
               className={`border-l-4 pl-3 mt-6  tracking-wider ${
                 i === 2
-                  ? "text-white"
-                  : "border-darkblue text-gray-600"
+                  ? ""
+                  : "border-darkblue "
               }`}
             >
               {stat.label}

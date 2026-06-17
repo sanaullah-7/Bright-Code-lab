@@ -156,10 +156,10 @@ export default function Footer() {
             {/* Right */}
             <div className="flex gap-4 text-xl ">
               <FaLinkedinIn className="cursor-pointer hover:text-darkblue " />
-              <FaFacebookF className="cursor-pointer hover:text-darkblue " />
-              <FaInstagram className="cursor-pointer hover:text-darkblue " />
-              <FaYoutube className="cursor-pointer hover:text-darkblue " />
-              <FaSpotify className="cursor-pointer hover:text-darkblue " />
+              <FaFacebookF  className="cursor-pointer hover:text-darkblue " />
+              <FaInstagram  className="cursor-pointer hover:text-darkblue " />
+              <FaYoutube    className="cursor-pointer hover:text-darkblue " />
+              <FaSpotify    className="cursor-pointer hover:text-darkblue " />
             </div>
 
           </div>

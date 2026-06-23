@@ -38,34 +38,34 @@ export default function HeroSection() {
       animate="visible"
     >
       {/* Heading */}
-      <div className="md:mt-16 w-full">
+      <div className="mdd:mt-16 w-full">
         <h1
           
-          className="flex flex-col max-sm:mx-5 mx-10 serviceDd:mx-14 md:items-center text-darklab tracking-wide max-sm:text-2xl text-4xl serviceDd:text-5xl gap-5 md:text-[75px]"
+          className="flex flex-col max-sm:mx-5 mx-10 serviceDd:mx-14 mdd:items-center text-darklab tracking-wide max-sm:text-2xl text-4xl serviceDd:text-5xl gap-5 mdd:text-[75px]"
         >
-          <span className="md:-ml-72 lg:-ml-96">
+          <span className="mdd:-ml-72 lg:-ml-96">
             Custom Software
           </span>
 
-          <span className="md:-ml-16 flex justify-center">
+          <span className="mdd:-ml-16 flex justify-center">
             Development Company
           </span>
 
-          <span className="text-darkblue md:ml-40 lg:ml-52 flex justify-end">
+          <span className="text-darkblue mdd:ml-40 lg:ml-52 flex justify-end">
             — Web, Mobile & AI
           </span>
         </h1>
       </div>
 
       {/* Section 2 */}
-      <div className="flex flex-col items-center md:items-start md:flex-row justify-center lg:gap-12 mt-10 md:mt-32 w-full px-5 sm:px-8 md:px-10">
+      <div className="flex flex-col items-center mdd:items-start mdd:flex-row justify-center lg:gap-12 mt-10 mdd:mt-32 w-full px-5 sm:px-8 mdd:px-10">
         
         {/* Left Side */}
         <div
           
-          className="space-y-8 md:mt-20 ml-10"
+          className="space-y-8 mdd:mt-20 ml-10"
         >
-          <h1 className="w-[70vw] md:w-80 text-darklab leading-7">
+          <h1 className="w-[70vw] mdd:w-80 text-darklab leading-7">
             We build custom web and mobile apps, enterprise software,
             and AI systems — for startups, scale-ups, and
             well-established companies. AI-augmented process,
@@ -94,7 +94,7 @@ export default function HeroSection() {
           </div>
 
           {/* Mobile + Balloon */}
-          <motion.div variants={item} className="mt-20 relative items-center hidden md:flex">
+          <motion.div variants={item} className="mt-20 relative items-center hidden mdd:flex">
             <div>
               <Image
                 src="/Home/mob3.png"
@@ -121,7 +121,7 @@ export default function HeroSection() {
           variants={item}
           className="h-auto"
         >
-          <div className="relative w-md sm:w-xl h-100 sm:h-145 rounded-[120px] bg-darkblue max-lg:scale-75 origin-center">
+          <div className="relative w-mdd sm:w-xl h-100 sm:h-145 rounded-[120px] bg-darkblue max-lg:scale-75 origin-center">
             
             <Image
               className="absolute left-10 bottom-16 h-100 sm:h-140 w-50 sm:w-64"
@@ -145,7 +145,7 @@ export default function HeroSection() {
             alt="balloon"
             width={150}
             height={150}
-            className="flex justify-center items-center ml-25 md:hidden"
+            className="flex justify-center items-center ml-25 mdd:hidden"
           />
 
           <div className="hidden sm:flex gap-10">
@@ -155,7 +155,7 @@ export default function HeroSection() {
                 alt="map"
                 width={800}
                 height={500}
-                className="md:hidden mt-16"
+                className="mdd:hidden mt-16"
               />
             </div>
 
@@ -165,7 +165,7 @@ export default function HeroSection() {
                 alt="mob"
                 width={250}
                 height={250}
-                className="md:hidden"
+                className="mdd:hidden"
               />
             </div>
           </div>

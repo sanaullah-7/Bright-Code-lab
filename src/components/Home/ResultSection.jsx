@@ -21,13 +21,13 @@ export default function ResultsSection() {
   ];
 
   return (
-    <section className="max-w-7xl px-5 sm:px-10 md:px-16 lg:px-24 pb-20 ">
+    <section className="max-w-7xl px-5 sm:px-10 mdd:px-16 lg:px-24 pb-20 ">
 
       {/* Top green line */}
       <div className="w-26 sm:w-32 h-2 rounded-2xl bg-darkblue mb-6" />
 
       {/* Heading */}
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-gray-900 mb-4">
+      <h1 className="text-3xl sm:text-4xl mdd:text-5xl font-semibold text-gray-900 mb-4">
         Results We Deliver
       </h1>
 

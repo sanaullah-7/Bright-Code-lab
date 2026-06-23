@@ -37,10 +37,10 @@ const data = [
 
 export default function ServicesSection() {
   return (
-    <section className="py-8 px-4 md:px-8 lg:px-16">
+    <section className="py-8 px-4 mdd:px-8 lg:px-16">
       {/* Heading */}
-      <div className="text-center mb-6 md:mb-14">
-        <h1 className="text-2xl md:text-3xl lg:text-4xl  tracking-widest leading-tight">
+      <div className="text-center mb-6 mdd:mb-14">
+        <h1 className="text-2xl mdd:text-3xl lg:text-4xl  tracking-widest leading-tight">
           <span className="text-darkblue">Custom</span> Software
           <br />
           Development Services
@@ -52,7 +52,7 @@ export default function ServicesSection() {
         {data.map((card) => (
           <div
             key={card.id}
-            className="bg-[#EBE7E4] rounded-3xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-md transition-all duration-300"
+            className="bg-[#EBE7E4] rounded-3xl p-8 flex flex-col items-center text-center shadow-sm hover:shadow-mdd transition-all duration-300"
           >
             <Image
               src={card.image}

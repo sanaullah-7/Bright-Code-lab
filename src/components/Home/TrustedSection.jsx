@@ -15,7 +15,7 @@ export default function TrustedSection() {
         <h1 className="text-center text-gray">Since 2017, Trusted by:</h1>
       <div className="pb-10 sm:px-40">
 
-        <div className=" mx-auto grid sm:grid-cols-2 md2:grid-cols-3 lg:grid-cols-5 mt-8 gap-y-10  ">
+        <div className=" mx-auto grid sm:grid-cols-2 mdd2:grid-cols-3 lg:grid-cols-5 mt-8 gap-y-10  ">
           {logos.map((logo, index) => (
             <div key={index} className="flex items-center justify-center">
               <Image
@@ -30,7 +30,7 @@ export default function TrustedSection() {
           ))}
         </div>
       </div>
-      <div className="bg-darkblue px-1 pt-5 mt-10 sm:mt-0  text-white flex flex-wrap  justify-center items-center sm:gap-10  md:gap-44 lg:gap-64 max-w-screen mx-auto   ">
+      <div className="bg-darkblue px-1 pt-5 mt-10 sm:mt-0  text-white flex flex-wrap  justify-center items-center sm:gap-10  mdd:gap-44 lg:gap-64 max-w-screen mx-auto   ">
         <div className="space-y-2">
         <p className="w-70">
           (...) Working with them has been a pleasure. The working relationship

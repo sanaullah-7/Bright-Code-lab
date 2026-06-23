@@ -5,8 +5,8 @@ import { portfolioData, portfolioImages } from "@/data/Data";
 
 export default function PortfolioDropdown() {
   return (
-    <main className="md:flex  mb-5">
-      <div className="flex md:w-[35vw] text-darklab flex-col md:px-6 gap-4 text-sm mt-5">
+    <main className="mdd:flex  mb-5">
+      <div className="flex mdd:w-[35vw] text-darklab flex-col mdd:px-6 gap-4 text-sm mt-5">
         {portfolioData.map((project) => (
           <Link
             key={project.href}

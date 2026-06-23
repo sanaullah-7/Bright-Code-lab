@@ -53,15 +53,15 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50  flex justify-center items-center ">
       <div
         ref={navbarRef}
-        className=" h-full text-darklab   md:mt-6 max-w-full md:w-[60em]   md:rounded-4xl border border-gray-300 bg-white/95"
+        className=" h-full text-darklab   mdd:mt-6 max-w-full mdd:w-[60em]   mdd:rounded-4xl border border-gray-300 bg-white/95"
       >
         {/* Navbar Top */}
 
-        <div className="flex h-14  md:py-8 items-center justify-between  max-sm:px-6 px-9 md:px-2 text-lg">
+        <div className="flex h-14  mdd:py-8 items-center justify-between  max-sm:px-6 px-9 mdd:px-2 text-lg">
           {/* Logo */}
           <Link
             href="/"
-            className="flex h-auto w-auto -ml-2.5 md:ml-3 items-center gap-2"
+            className="flex h-auto w-auto -ml-2.5 mdd:ml-3 items-center gap-2"
           >
             <Image
             className="h-12 w-28"
@@ -75,7 +75,7 @@ export default function Navbar() {
           </Link>
 
           {/* Navigation */}
-          <nav className="hidden items-center w-[45%] gap-7 justify-between text-base  md:flex">
+          <nav className="hidden items-center w-[45%] gap-7 justify-between text-base  mdd:flex">
             {navLinks.map((link) => {
               // Check dropdown items
               const hasDropdown =
@@ -89,7 +89,7 @@ export default function Navbar() {
                   <button
                     key={link.href}
                     onClick={() => toggleMenu(menuName)}
-                    className=" flex items-center gap-1 text-md  transition cursor-pointer hover:text-darkblue"
+                    className=" flex items-center gap-1 text-mdd  transition cursor-pointer hover:text-darkblue"
                   >
                     {link.label}
 
@@ -130,11 +130,11 @@ export default function Navbar() {
           {/* Contact Button */}
           <Link
             href="/contact"
-            className="rounded-full hidden md:flex border font-serif border-black bg-darkblue px-8 py-2.5 text-base  text-white transition hover:bg-[#1042b7]"
+            className="rounded-full hidden mdd:flex border font-serif border-black bg-darkblue px-8 py-2.5 text-base  text-white transition hover:bg-[#1042b7]"
           >
             Contact us
           </Link>
-          <button onClick={Handletoogle} className="md:hidden">
+          <button onClick={Handletoogle} className="mdd:hidden">
             <Menu className="h-5 w-5 " />
           </button>
         </div>
@@ -142,7 +142,7 @@ export default function Navbar() {
         {/* Dropdown Container */}
 
         <div
-          className={`hidden md:grid  transition-all ease-in-out duration-300  ${
+          className={`hidden mdd:grid  transition-all ease-in-out duration-300  ${
             activeMenu ? "grid-rows-[1fr]" : "grid-rows-[0fr] "
           }`}
         >
@@ -161,7 +161,7 @@ export default function Navbar() {
         </div>
         {/* Mobile Size */}
         <div
-          className={`grid md:hidden overflow-hidden  transition-all ease-in-out duration-300  ${
+          className={`grid mdd:hidden overflow-hidden  transition-all ease-in-out duration-300  ${
             open ? "grid-rows-[1fr]" : "grid-rows-[0fr] "
           }`}
         >

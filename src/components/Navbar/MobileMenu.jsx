@@ -45,7 +45,7 @@ export default function MobileMenu() {
   return (
     <div
       ref={navbarRef}
-      className=" md:hidden   border border-gray-300 bg-white"
+      className=" mdd:hidden   border border-gray-300 bg-white"
     >
       {/* Navbar Top */}
 
@@ -65,7 +65,7 @@ export default function MobileMenu() {
                 <div key={link.href}>
                   <button
                     onClick={() => toggleMenu(menuName)}
-                    className="flex items-center gap-1 text-md text-gray-700 transition cursor-pointer hover:text-darkblue"
+                    className="flex items-center gap-1 text-mdd text-gray-700 transition cursor-pointer hover:text-darkblue"
                   >
                     {link.label}
 

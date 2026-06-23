@@ -40,7 +40,7 @@ const caseStudies = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#f5f5f5] px-6 md:px-12 lg:px-20 py-12">
+    <footer className="bg-[#f5f5f5] px-6 mdd:px-12 lg:px-20 py-12">
       
       {/* Top Border */}
       <div className="border-t border-gray pt-10">
@@ -49,7 +49,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
           {/* Left Side */}
-          <div className="md:border-r border-gray md:pr-10 lg:ml-5">
+          <div className="mdd:border-r border-gray mdd:pr-10 lg:ml-5">
             <h1 className="text-2xl sm:text-3xl font-bold text-darkblue leading-tight">
               Bright
               <br />
@@ -142,10 +142,10 @@ export default function Footer() {
         {/* Bottom Border */}
         <div className="border-t border-gray mt-14 pt-8">
 
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex flex-col mdd:flex-row justify-between items-center gap-6">
 
             {/* Left */}
-            <div className="flex flex-wrap justify-center md:justify-start gap-6 text-gray text-sm">
+            <div className="flex flex-wrap justify-center mdd:justify-start gap-6 text-gray text-sm">
               <span>Bright CodeLab</span>
               <span>We code with 💡</span>
               <span>Privacy policy</span>

@@ -8,6 +8,7 @@ export default function HeroSection({
   borderClass,
   topClass,
 }) {
+
   return (
     <>
       <section className="md:hidden mt-20 md:mt-0 pb-8 sm:pb-12 overflow-hidden">
@@ -48,12 +49,13 @@ export default function HeroSection({
         </div>
 
         {/* Image Below Text */}
-        <div className="relative w-full h-auto mt-6">
+        <div className=" w-full h-auto mt-6">
           <Image
             src={image}
             height={600}
             width={1400}
             alt="hero"
+            // loading="lazy"
             priority
             className="object-cover h-auto w-full"
           />
@@ -71,6 +73,7 @@ export default function HeroSection({
               height={600}
               width={1400}
               alt="hero"
+              // loading="lazy"
               priority
               className="object-cover h-aut o w-full"
             />

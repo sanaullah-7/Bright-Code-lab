@@ -110,7 +110,7 @@ export default function HeroSection() {
                 alt="balloon"
                 width={200}
                 height={200}
-                className="absolute bottom-8 left-96"
+                className="absolute bottom-8 left-96 "
               />
             </div>
           </motion.div>
@@ -121,7 +121,7 @@ export default function HeroSection() {
           variants={item}
           className="h-auto"
         >
-          <div className="relative w-mdd sm:w-xl h-100 sm:h-145 rounded-[120px] bg-darkblue max-lg:scale-75 origin-center">
+          <div className="relative w-md sm:w-xl h-100 sm:h-145 rounded-[120px] bg-darkblue max-lg:scale-75 origin-center">
             
             <Image
               className="absolute left-10 bottom-16 h-100 sm:h-140 w-50 sm:w-64"

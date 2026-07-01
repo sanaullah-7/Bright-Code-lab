@@ -1,4 +1,5 @@
 // import { services } from "@/data/services";
+import Trusted from "@/components/Services/TrustedSection";
 import Services from "@/components/Services/ServicesPage";
 // import { notFound } from "next/navigation";
 const services = [
@@ -8,6 +9,7 @@ const services = [
     description:"Custom Software Development Services",
     para:"Tailored solutions designed to meet your specific business requirements and challenges.",
     image: "/services/hero.png",
+    logo:"hi"
   },
 
   {
@@ -45,10 +47,15 @@ const services = [
 {
   slug:"ux-ui-product-design",
   title: "Design",
+  description:"",
+    image: "/services/ai.jpg",
+
 },
 {
   slug:"support-and-maintenance",
-  title:"Maintenance"
+  title:"Maintenance",
+    image: "/services/ai.jpg",
+
 
 }
 ];
@@ -96,6 +103,7 @@ export default async function Page({ params }) {
   }
 
   return (
+    <>
     <Services
       title={service.title}
       description={service.description}
@@ -104,6 +112,11 @@ export default async function Page({ params }) {
       // web
       borderClass={service.borderClass}
       topClass={service.topClass}
+      
     />
+    <Trusted 
+    logo={service.logo}
+    />
+    </>
   );
 }
